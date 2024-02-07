@@ -1,0 +1,45 @@
+body {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+}
+
+#button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 20px;
+}
+
+.day-button {
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+#box {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  display: none;
+  background-color: inherit;
+  transition: background-color 1s, top 1s, opacity 1s;
+}
+
+@keyframes slideIn {
+  from {
+    top: -200px;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}
